@@ -36,6 +36,8 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4262756183574849"
   crossorigin="anonymous"></script>
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4262756183574849"
+     crossorigin="anonymous"></script>
   <!-- Performance API Polyfills -->
   <script>
   (function () {
@@ -44,20 +46,7 @@
       window.performance = {};
     }
     window.performance.mark = performance.mark || noop;
-    window.performance.measure = performance.measure || noop;
-    if ("now" in window.performance === false) {
-      var nowOffset = Date.now();
-      if (performance.timing && performance.timing.navigationStart) {
-        nowOffset = performance.timing.navigationStart;
-      }
-      window.performance.now = function now() {
-        return Date.now() - nowOffset;
-      };
-    }
-  })();
-  </script>
-
-  <!-- Globals Definitions -->
+    window.performance.measure = performance.measure || noop; 
   <script>
     (function () {
       var now = Date.now()
